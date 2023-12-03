@@ -17,8 +17,8 @@ const searchExercisesByName = async (req, res) => {
             return res.status(400).json({ error: 'Search name is required.' });
         }
 
-        const events = await Exercise.find({ title: { $regex: new RegExp(name, 'i') } });
-        res.json(events);
+        const exercises = await Exercise.find({ name: { $regex: new RegExp(name, 'i') } });
+        res.json(exercises);
     } catch (error) {
         return res.status(500).send(error.message);
     }

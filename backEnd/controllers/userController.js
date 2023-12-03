@@ -17,7 +17,7 @@ const searchUsersByName = async (req, res) => {
             return res.status(400).json({ error: 'Search name is required.' });
         }
 
-        const events = await User.find({ title: { $regex: new RegExp(name, 'i') } });
+        const events = await User.find({ name: { $regex: new RegExp(name, 'i') } });
         res.json(events);
     } catch (error) {
         return res.status(500).send(error.message);

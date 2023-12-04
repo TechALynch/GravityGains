@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      const response = await fetch('/login', {
+      const response = await fetch('http://localhost:3001/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -22,6 +23,7 @@ export default function Login() {
       if (response.ok) {
         // Authentication successful, you can redirect or perform any other action
         console.log('Login successful');
+        navigate('/SkillsIndexPageHOME');
       } else {
         // Authentication failed
         const data = await response.json();
@@ -89,12 +91,12 @@ export default function Login() {
                   <div>
                     <p className="mb-0">
                       Don't have an account?{' '}
+                    </p>
                       <p>
                       <Link to="/SignUp" className="text-dark-50 fw-bold">
                         Sign Up
                       </Link>
                       </p>
-                    </p>
                   </div>
                 </div>
               </div>

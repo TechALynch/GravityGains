@@ -19,6 +19,9 @@ app.use(express.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(logger('dev'))
 
+// New route for user login
+app.post('/login', userController.login);
+
 //Routes
 app.get('/exercises', exerciseController.getAllExercises)
 app.get('/skills', skillController.getAllSkills)
@@ -33,7 +36,7 @@ app.get('/workouts/search', workoutController.searchWorkoutsByName);
 
 app.get('/exercise/:id', exerciseController.getOneExercise)
 app.get('/skills/:id', skillController.getOneSkill)
-app.get('/user/:auth0Id', userController.getUserWithAuth0Id);
+app.get('/user/:authenticationId', userController.getUserWithAuth0Id);
 app.get('/user/:id', userController.getOneUser)
 app.get('/workout/:id', workoutController.getOneWorkout)
 

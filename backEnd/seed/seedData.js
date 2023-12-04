@@ -19,7 +19,8 @@ const findOrCreateExercise = async (exerciseData) => {
 const main = async () => {
   ////Add new Users\\\\
   const Admin = await User.create({
-    auth0Id: '',
+    authenticationId: '',
+    password: '12345678',
     userName: 'Admin',
     email: 'Anthony.Lynch001@example.com',
     fName: 'Anthony',
@@ -27,7 +28,8 @@ const main = async () => {
   });
 
   const User2 = await User.create({
-    auth0Id: '',
+    authenticationId: '',
+    password: '12345678',
     userName: 'John.Doe',
     email: 'John.Doe@outlook.com',
     fName: 'John',

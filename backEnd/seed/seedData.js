@@ -804,7 +804,7 @@ const MuscleUpSkill = await Skill.create({
   userId: Admin._id, // Associate it with Admin
   workoutID: MuscleUpWorkoutIds,
   name: 'Muscle Up',
-  image: '',
+  image: './UNIT5/week1/mon/GravityGains/backEnd/seed/Images/skillImages/MuscleUp.png',
 });
 console.log(`Skill "${MuscleUpSkill.name}" created with workouts:`, MuscleUpWorkoutIds);
 
@@ -813,7 +813,7 @@ const PlancheSkill = await Skill.create({
   userId: Admin._id,
   workoutID: PlancheWorkoutIds,
   name: 'Planche',
-  image: '',
+  image: './UNIT5/week1/mon/GravityGains/backEnd/seed/Images/skillImages/Planche.png',
 });
 console.log(`Skill "${PlancheSkill.name}" created with workouts:`, PlancheWorkoutIds);
 
@@ -822,7 +822,7 @@ const FrontLeverSkill = await Skill.create({
   userId: Admin._id,
   workoutID: FrontLeverWorkoutIds,
   name: 'Front Lever',
-  image: '',
+  image: './UNIT5/week1/mon/GravityGains/backEnd/seed/Images/skillImages/FrontLever.png',
 });
 console.log(`Skill "${FrontLeverSkill.name}" created with workouts:`, FrontLeverWorkoutIds);
 
@@ -831,7 +831,7 @@ const BackLeverSkill = await Skill.create({
   userId: Admin._id,
   workoutID: BackLeverWorkoutIds,
   name: 'Back Lever',
-  image: '',
+  image: './UNIT5/week1/mon/GravityGains/backEnd/seed/Images/skillImages/BackLever.png',
 });
 console.log(`Skill "${BackLeverSkill.name}" created with workouts:`, BackLeverWorkoutIds);
 
@@ -840,7 +840,7 @@ const PistolSquatSkill = await Skill.create({
   userId: Admin._id,
   workoutID: PistolSquatWorkoutIds,
   name: 'Pistol Squat',
-  image: '',
+  image: './UNIT5/week1/mon/GravityGains/backEnd/seed/Images/skillImages/PistolSquat.png',
 });
 console.log(`Skill "${PistolSquatSkill.name}" created with workouts:`, PistolSquatWorkoutIds);
 
@@ -849,7 +849,7 @@ const HandstandPushUpSkill = await Skill.create({
   userId: Admin._id,
   workoutID: HandstandPushUpWorkoutIds,
   name: 'Handstand Push Up',
-  image: '',
+  image: './UNIT5/week1/mon/GravityGains/backEnd/seed/Images/skillImages/HandstandPushUp.png',
 });
 console.log(`Skill "${HandstandPushUpSkill.name}" created with workouts:`, HandstandPushUpWorkoutIds);
 
@@ -858,7 +858,7 @@ const VSitSkill = await Skill.create({
   userId: Admin._id,
   workoutID: VSitWorkoutIds,
   name: 'V-Sit',
-  image: '',
+  image: './UNIT5/week1/mon/GravityGains/backEnd/seed/Images/skillImages/VSit.png',
 });
 console.log(`Skill "${VSitSkill.name}" created with workouts:`, VSitWorkoutIds);
 
@@ -867,7 +867,7 @@ const OneArmPullUpSkill = await Skill.create({
   userId: Admin._id,
   workoutID: OneArmPullUpWorkoutIds,
   name: 'One Arm Pull Up',
-  image: '',
+  image: './UNIT5/week1/mon/GravityGains/backEnd/seed/Images/skillImages/OneArmPullUp.png',
 });
 console.log(`Skill "${OneArmPullUpSkill.name}" created with workouts:`, OneArmPullUpWorkoutIds);
 
@@ -876,7 +876,7 @@ const HumanFlagSkill = await Skill.create({
   userId: Admin._id,
   workoutID: HumanFlagWorkoutIds,
   name: 'Human Flag',
-  image: '',
+  image: './UNIT5/week1/mon/GravityGains/backEnd/seed/Images/skillImages/HumanFlag.png',
 });
 console.log(`Skill "${HumanFlagSkill.name}" created with workouts:`, HumanFlagWorkoutIds);
 
@@ -885,16 +885,16 @@ const OneArmPushUpSkill = await Skill.create({
   userId: Admin._id,
   workoutID: OneArmPushUpWorkoutIds,
   name: 'One Arm Push Up',
-  image: '',
+  image: './UNIT5/week1/mon/GravityGains/backEnd/seed/Images/skillImages/OneArmPushUp.png',
 });
-console.log(`Skill "${HumanFlagSkill.name}" created with workouts:`, HumanFlagWorkoutIds);
+console.log(`Skill "${OneArmPushUpSkill.name}" created with workouts:`, HumanFlagWorkoutIds);
 
 const OneArmHandstandWorkoutIds = [];
 const OneArmHandstandSkill = await Skill.create({
   userId: Admin._id,
   workoutID: OneArmHandstandWorkoutIds,
   name: 'One Arm Handstand',
-  image: '',
+  image: './UNIT5/week1/mon/GravityGains/backEnd/seed/Images/skillImages/OneArmHandstand.png',
 });
 console.log(`Skill "${OneArmHandstandSkill.name}" created with workouts:`, OneArmHandstandWorkoutIds);
 
@@ -904,7 +904,7 @@ const ShrimpSquatSkill = await Skill.create({
   userId: Admin._id,
   workoutID: ShrimpSquatWorkoutIds,
   name: 'Shrimp Squat',
-  image: '',
+  image: './UNIT5/week1/mon/GravityGains/backEnd/seed/Images/skillImages/ShrimpSquat.png',
 });
 console.log(`Skill "${ShrimpSquatSkill.name}" created with workouts:`, ShrimpSquatWorkoutIds);
 
@@ -914,7 +914,7 @@ const HefestoSkill = await Skill.create({
   userId: Admin._id,
   workoutID: HefestoWorkoutIds,
   name: 'Hefesto',
-  image: '',
+  image: './UNIT5/week1/mon/GravityGains/backEnd/seed/Images/skillImages/Hefesto.png',
 });
 console.log(`Skill "${HefestoSkill.name}" created with workouts:`, HefestoWorkoutIds);
 
@@ -923,7 +923,7 @@ const DragonFlagSkill = await Skill.create({
   userId: Admin._id,
   workoutID: DragonFlagWorkoutIds,
   name: 'Dragon Flag',
-  image: '',
+  image: './UNIT5/week1/mon/GravityGains/backEnd/seed/Images/skillImages/DragonFlag.png',
 });
 console.log(`Skill "${DragonFlagSkill.name}" created with workouts:`, DragonFlagWorkoutIds);
 

@@ -797,7 +797,7 @@ console.log(`Workout "${MuscleUp.name}" created with exercises:`, G5exerciseIds)
 
  ////Add new Skills\\\\
 // Create an array to store workout IDs
-const MuscleUpWorkoutIds = [pushPullWorkout._id, highPushPullWorkout._id, MuscleUpStartJumping._id];
+const MuscleUpWorkoutIds = [pushPullWorkout._id, highPushPullWorkout._id, MuscleUpStartJumping._id, KippingMuscleUp._id, MuscleUp._id ];
 
 // Create the skill with the workout IDs
 const MuscleUpSkill = await Skill.create({
@@ -806,7 +806,6 @@ const MuscleUpSkill = await Skill.create({
   name: 'Muscle Up',
   image: '',
 });
-
 console.log(`Skill "${MuscleUpSkill.name}" created with workouts:`, MuscleUpWorkoutIds);
 
 const PlancheWorkoutIds = [];
@@ -814,11 +813,119 @@ const PlancheSkill = await Skill.create({
   userId: Admin._id,
   workoutID: PlancheWorkoutIds,
   name: 'Planche',
+  image: '',
 });
 console.log(`Skill "${PlancheSkill.name}" created with workouts:`, PlancheWorkoutIds);
 
+const FrontLeverWorkoutIds = [];
+const FrontLeverSkill = await Skill.create({
+  userId: Admin._id,
+  workoutID: FrontLeverWorkoutIds,
+  name: 'Front Lever',
+  image: '',
+});
+console.log(`Skill "${FrontLeverSkill.name}" created with workouts:`, FrontLeverWorkoutIds);
+
+const BackLeverWorkoutIds = [];
+const BackLeverSkill = await Skill.create({
+  userId: Admin._id,
+  workoutID: BackLeverWorkoutIds,
+  name: 'Back Lever',
+  image: '',
+});
+console.log(`Skill "${BackLeverSkill.name}" created with workouts:`, BackLeverWorkoutIds);
+
+const PistolSquatWorkoutIds = [];
+const PistolSquatSkill = await Skill.create({
+  userId: Admin._id,
+  workoutID: PistolSquatWorkoutIds,
+  name: 'Pistol Squat',
+  image: '',
+});
+console.log(`Skill "${PistolSquatSkill.name}" created with workouts:`, PistolSquatWorkoutIds);
+
+const HandstandPushUpWorkoutIds = [];
+const HandstandPushUpSkill = await Skill.create({
+  userId: Admin._id,
+  workoutID: HandstandPushUpWorkoutIds,
+  name: 'Handstand Push Up',
+  image: '',
+});
+console.log(`Skill "${HandstandPushUpSkill.name}" created with workouts:`, HandstandPushUpWorkoutIds);
+
+const VSitWorkoutIds = [];
+const VSitSkill = await Skill.create({
+  userId: Admin._id,
+  workoutID: VSitWorkoutIds,
+  name: 'V-Sit',
+  image: '',
+});
+console.log(`Skill "${VSitSkill.name}" created with workouts:`, VSitWorkoutIds);
+
+const OneArmPullUpWorkoutIds = [];
+const OneArmPullUpSkill = await Skill.create({
+  userId: Admin._id,
+  workoutID: OneArmPullUpWorkoutIds,
+  name: 'One Arm Pull Up',
+  image: '',
+});
+console.log(`Skill "${OneArmPullUpSkill.name}" created with workouts:`, OneArmPullUpWorkoutIds);
+
+const HumanFlagWorkoutIds = [];
+const HumanFlagSkill = await Skill.create({
+  userId: Admin._id,
+  workoutID: HumanFlagWorkoutIds,
+  name: 'Human Flag',
+  image: '',
+});
+console.log(`Skill "${HumanFlagSkill.name}" created with workouts:`, HumanFlagWorkoutIds);
+
+const OneArmPushUpWorkoutIds = [];
+const OneArmPushUpSkill = await Skill.create({
+  userId: Admin._id,
+  workoutID: OneArmPushUpWorkoutIds,
+  name: 'One Arm Push Up',
+  image: '',
+});
+console.log(`Skill "${HumanFlagSkill.name}" created with workouts:`, HumanFlagWorkoutIds);
+
+const OneArmHandstandWorkoutIds = [];
+const OneArmHandstandSkill = await Skill.create({
+  userId: Admin._id,
+  workoutID: OneArmHandstandWorkoutIds,
+  name: 'One Arm Handstand',
+  image: '',
+});
+console.log(`Skill "${OneArmHandstandSkill.name}" created with workouts:`, OneArmHandstandWorkoutIds);
 
 
+const ShrimpSquatWorkoutIds = [];
+const ShrimpSquatSkill = await Skill.create({
+  userId: Admin._id,
+  workoutID: ShrimpSquatWorkoutIds,
+  name: 'Shrimp Squat',
+  image: '',
+});
+console.log(`Skill "${ShrimpSquatSkill.name}" created with workouts:`, ShrimpSquatWorkoutIds);
+
+
+const HefestoWorkoutIds = [];
+const HefestoSkill = await Skill.create({
+  userId: Admin._id,
+  workoutID: HefestoWorkoutIds,
+  name: 'Hefesto',
+  image: '',
+});
+console.log(`Skill "${HefestoSkill.name}" created with workouts:`, HefestoWorkoutIds);
+
+const DragonFlagWorkoutIds = [];
+const DragonFlagSkill = await Skill.create({
+  userId: Admin._id,
+  workoutID: DragonFlagWorkoutIds,
+  name: 'Dragon Flag',
+  image: '',
+});
+console.log(`Skill "${DragonFlagSkill.name}" created with workouts:`, DragonFlagWorkoutIds);
 
 };
 

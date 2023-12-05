@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Axios from 'axios';
+// import skillImages from '../../../backEnd/seed/Images/skillImages/';
 
 export default function SkillPage() {
   const [skills, setSkills] = useState([]);
@@ -33,7 +34,7 @@ export default function SkillPage() {
           >
             <Card.Header>{skill.name}</Card.Header>
             <Card.Body>
-              <Card.Title as="h5">{skill.image}</Card.Title>
+              <Card.Img src={skill.image}/>
               {/* <Card.Text>
                 With supporting text below as a natural lead-in to additional
                 content.

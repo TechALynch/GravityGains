@@ -38,7 +38,7 @@ const main = async () => {
   
   ////Add new body Categories\\\\
   const bodyCategoriesLegs = await Category.create({
-    image: './GravityGains/backEnd/seed/Images/categoryImages/legIcon.png',
+    image: '/Images/categoryImages/legIcon.png',
     name: 'Legs',
     description: `
       The "Legs" refer to the lower extremities of the human body, including the thighs, knees, calves, ankles, and feet. The muscles in the legs are vital for various functions, such as walking, running, standing, and providing stability.
@@ -58,7 +58,7 @@ const main = async () => {
   });
   
   const bodyCategoriesCore = await Category.create({
-    image: './GravityGains/backEnd/seed/Images/categoryImages/coreIcon.png',
+    image: '/Images/categoryImages/coreIcon.png',
     name: 'Core',
     description: `
       The "Core" refers to the central part of the body, encompassing various muscles in the torso. These muscles play a crucial role in providing stability, supporting posture, and facilitating movement.
@@ -78,7 +78,7 @@ const main = async () => {
   });
   
   const bodyCategoriesShoulders = await Category.create({
-    image: './GravityGains/backEnd/seed/Images/categoryImages/shoulderIcon.png',
+    image: '/Images/categoryImages/shoulderIcon.png',
     name: 'Shoulders',
     description: `
       The "Shoulders" refer to the deltoid muscles that form the rounded contours of the upper arms and shoulders. Developing strong and well-defined shoulders not only contributes to an appealing physique but also enhances upper body strength and functionality.
@@ -98,7 +98,7 @@ const main = async () => {
   });  
 
   const bodyCategoriesChest = await Category.create({
-    image: './GravityGains/backEnd/seed/Images/categoryImages/chestIcon.png',
+    image: '/Images/categoryImages/chestIcon.png',
     name: 'Chest',
     description: `
       The "Chest" refers to the pectoral muscles located in the front of the upper body. These muscles play a significant role in various upper body movements and contribute to overall upper body strength and aesthetics.
@@ -118,7 +118,7 @@ const main = async () => {
   });
   
   const bodyCategoriesBack = await Category.create({
-    image: './GravityGains/backEnd/seed/Images/categoryImages/backIcon.png',
+    image: '/Images/categoryImages/backIcon.png',
     name: 'Back',
     description: `
       The "Back" refers to the posterior part of the upper body, encompassing various muscles that play a crucial role in supporting posture, facilitating movement, and contributing to overall strength.
@@ -138,7 +138,7 @@ const main = async () => {
   });
   
   const bodyCategoriesArms = await Category.create({
-    image: './GravityGains/backEnd/seed/Images/categoryImages/armsIcon.png',
+    image: '/Images/categoryImages/armsIcon.png',
     name: 'Arms',
     description: `
       The "Arms" refer to the upper limbs of the human body, including the shoulders, upper arms, forearms, and hands. Developing arm muscles not only contributes to aesthetic goals but also enhances functional strength and performance in various activities.
@@ -160,7 +160,7 @@ const main = async () => {
   ////Add new Exercises\\\\
   const ExerciseGroup1 = [
 {
-  image: './GravityGains/backEnd/seed/Images/exerciseImages/Pullup.png',
+  image: '/Images/exerciseImages/Pullup.png',
   name: 'Pull-Up',
   lvl: 'Beginner',
   video: 'https://www.youtube.com/watch?v=GBqAZP6jquc',
@@ -188,7 +188,7 @@ const main = async () => {
   categories: [bodyCategoriesArms._id, bodyCategoriesBack._id]
 },
 {
-  image: './GravityGains/backEnd/seed/Images/exerciseImages/BodyRow.png',
+  image: '/Images/exerciseImages/BodyRow.png',
   name: 'Body Row',
   lvl: 'Beginner',
   video: 'https://youtu.be/FnWrvWZDJTo?si=USJ22Yd9kJKUbQ1J',
@@ -215,7 +215,7 @@ const main = async () => {
     categories: [bodyCategoriesArms._id, bodyCategoriesBack._id]
 },
 {
-  image: './GravityGains/backEnd/seed/Images/exerciseImages/Dip.png',
+  image: '/Images/exerciseImages/Dip.png',
   name: 'Dip',
   lvl: 'Beginner',
   video: 'https://www.youtube.com/watch?si=qv3Jsw7qHDr-4E9-&v=Z8C3d9Gcdk0&feature=youtu.be',
@@ -244,7 +244,7 @@ const main = async () => {
     categories: [bodyCategoriesArms._id, bodyCategoriesChest._id]
 },
 {
-  image: './GravityGains/backEnd/seed/Images/exerciseImages/PushUp.png',
+  image: '/Images/exerciseImages/PushUp.png',
   name: 'Push-Up',
   lvl: 'Beginner',
   video: 'https://www.youtube.com/watch?si=cxGleEi-vT7aYg-s&v=IODxDxX7oi4&feature=youtu.be',
@@ -287,14 +287,14 @@ const pushPullWorkout = await Workout.create({
   // userId: Admin._id,
   exerciseID: G1exerciseIds,
   name: 'Pull Push',
-  image: './GravityGains/backEnd/seed/Images/workoutImages/PushPull.png',
+  image: '/Images/workoutImages/PushPull.png',
   lvl: 'Beginner'
 });
 console.log(`Workout "${pushPullWorkout.name}" created with exercises:`, G1exerciseIds);
 
 const ExerciseGroup2 = [
   {
-    image: './GravityGains/backEnd/seed/Images/exerciseImages/HighPullUp.png',
+    image: '/Images/exerciseImages/HighPullUp.png',
     name: 'High Pull Up',
     lvl: 'Advanced',
     video: 'https://www.youtube.com/watch?v=vk3OuWhoS5Y',
@@ -322,7 +322,7 @@ const ExerciseGroup2 = [
     categories: [bodyCategoriesArms._id, bodyCategoriesBack._id]
   },
   {
-    image: './GravityGains/backEnd/seed/Images/exerciseImages/PullUp.png',
+    image: '/Images/exerciseImages/PullUp.png',
     name: 'Pull-Up',
     lvl: 'Beginner',
     video: 'https://www.youtube.com/watch?v=GBqAZP6jquc',
@@ -348,7 +348,7 @@ const ExerciseGroup2 = [
     categories: [bodyCategoriesArms._id, bodyCategoriesBack._id]
   },
   {
-    image: './GravityGains/backEnd/seed/Images/exerciseImages/StraightBarDip.png',
+    image: '/Images/exerciseImages/StraightBarDip.png',
     name: 'Straight Bar Dip',
     lvl: 'Beginner',
     video: 'https://youtu.be/70y7r0vBddM?si=25ThDoaerUJ7jhwr',
@@ -370,7 +370,7 @@ const ExerciseGroup2 = [
     categories: [bodyCategoriesArms._id, bodyCategoriesChest._id]
   },
   {
-    image: './GravityGains/backEnd/seed/Images/exerciseImages/PushUp.png',
+    image: '/Images/exerciseImages/PushUp.png',
     name: 'Push-Up',
     lvl: 'Beginner',
     video: 'https://www.youtube.com/watch?si=cxGleEi-vT7aYg-s&v=IODxDxX7oi4&feature=youtu.be',
@@ -408,7 +408,7 @@ const highPushPullWorkout = await Workout.create({
   // userId: Admin._id,
   exerciseID: G2exerciseIds,
   name: 'High Pull Push',
-  image: './GravityGains/backEnd/seed/Images/workoutImages/HighPushPull.png',
+  image: '/Images/workoutImages/HighPushPull.png',
   lvl: 'Beginner'
 });
 console.log(`Workout "${highPushPullWorkout.name}" created with exercises:`, G2exerciseIds);
@@ -416,7 +416,7 @@ console.log(`Workout "${highPushPullWorkout.name}" created with exercises:`, G2e
 
 const ExerciseGroup3 = [
   {
-    image: './GravityGains/backEnd/seed/Images/exerciseImages/JumpingMuscleUp.png',
+    image: '/Images/exerciseImages/JumpingMuscleUp.png',
     name: 'Jumping Muscle Up',
     lvl: 'Intermediate',
     video: 'https://youtu.be/-m2Joe4BjcA?si=Vp09FyBHx-jsWNBn',
@@ -449,7 +449,7 @@ const ExerciseGroup3 = [
     categories: [bodyCategoriesArms._id, bodyCategoriesBack._id]
   },  
   {
-    image: './GravityGains/backEnd/seed/Images/exerciseImages/HighPullUp.png',
+    image: '/Images/exerciseImages/HighPullUp.png',
     name: 'High Pull Up',
     lvl: 'Advanced',
     video: 'https://www.youtube.com/watch?v=vk3OuWhoS5Y',
@@ -477,7 +477,7 @@ const ExerciseGroup3 = [
     categories: [bodyCategoriesArms._id, bodyCategoriesBack._id]
   },
   {
-    image: './GravityGains/backEnd/seed/Images/exerciseImages/PullUp3x7.png',
+    image: '/Images/exerciseImages/PullUp3x7.png',
     name: 'Pull-Up',
     lvl: 'Beginner',
     video: 'https://www.youtube.com/watch?v=GBqAZP6jquc',
@@ -503,7 +503,7 @@ const ExerciseGroup3 = [
     categories: [bodyCategoriesArms._id, bodyCategoriesBack._id]
   },
   {
-    image: './GravityGains/backEnd/seed/Images/exerciseImages/StraightBarDip.png',
+    image: '/Images/exerciseImages/StraightBarDip.png',
     name: 'Straight Bar Dip',
     lvl: 'Beginner',
     video: 'https://youtu.be/70y7r0vBddM?si=25ThDoaerUJ7jhwr',
@@ -537,14 +537,14 @@ const MuscleUpStartJumping = await Workout.create({
   // userId: Admin._id,
   exerciseID: G3exerciseIds,
   name: 'Muscle Up Start (Jumping)',
-  image: './GravityGains/backEnd/seed/Images/workoutImages/JumpingmuscleUpstart.png',
+  image: '/Images/workoutImages/JumpingmuscleUpstart.png',
   lvl: 'Intermediate'
 });
 console.log(`Workout "${MuscleUpStartJumping.name}" created with exercises:`, G3exerciseIds);
 
 const ExerciseGroup4 = [
   {
-    image: './GravityGains/backEnd/seed/Images/exerciseImages/KippingMuscleUp.png',
+    image: '/Images/exerciseImages/KippingMuscleUp.png',
     name: 'Kipping Muscle Up',
     lvl: 'Advanced',
     video: 'https://youtu.be/PMEhv0-WC34?si=6fC4_nb8dDKLefl7',
@@ -575,7 +575,7 @@ const ExerciseGroup4 = [
     categories: [bodyCategoriesArms._id, bodyCategoriesBack._id, bodyCategoriesChest._id]
   },
   {
-    image: './GravityGains/backEnd/seed/Images/exerciseImages/HighPullUp.png',
+    image: '/Images/exerciseImages/HighPullUp.png',
     name: 'High Pull Up',
     lvl: 'Advanced',
     video: 'https://www.youtube.com/watch?v=vk3OuWhoS5Y',
@@ -603,7 +603,7 @@ const ExerciseGroup4 = [
     categories: [bodyCategoriesArms._id, bodyCategoriesBack._id]
   },
   {
-    image: './GravityGains/backEnd/seed/Images/exerciseImages/NegativeMuscleUp.png',
+    image: '/Images/exerciseImages/NegativeMuscleUp.png',
     name: 'Negative Muscle Up',
     lvl: 'Intermediate',
     video: 'https://youtu.be/70y7r0vBddM?si=MmIrEZ5rXYcnpFb_',
@@ -630,7 +630,7 @@ const ExerciseGroup4 = [
     categories: [bodyCategoriesArms._id, bodyCategoriesBack._id, bodyCategoriesChest._id]
   },  
   {
-    image: './GravityGains/backEnd/seed/Images/exerciseImages/StraightBarDip.png',
+    image: '/Images/exerciseImages/StraightBarDip.png',
     name: 'Straight Bar Dip',
     lvl: 'Beginner',
     video: 'https://youtu.be/70y7r0vBddM?si=25ThDoaerUJ7jhwr',
@@ -664,7 +664,7 @@ const KippingMuscleUp = await Workout.create({
   // userId: Admin._id,
   exerciseID: G4exerciseIds,
   name: 'Muscle Up Start (Jumping)',
-  image: './GravityGains/backEnd/seed/Images/workoutImages/KippingMuscleUp.png',
+  image: '/Images/workoutImages/KippingMuscleUp.png',
   lvl: 'Intermediate'
 });
 console.log(`Workout "${KippingMuscleUp.name}" created with exercises:`, G4exerciseIds);
@@ -672,7 +672,7 @@ console.log(`Workout "${KippingMuscleUp.name}" created with exercises:`, G4exerc
 
 const ExerciseGroup5 = [
   {
-    image: './GravityGains/backEnd/seed/Images/exerciseImages/MuscleUp.png',
+    image: '/Images/exerciseImages/MuscleUp.png',
     name: 'Muscle Up',
     lvl: 'Advanced',
     video: 'https://youtu.be/YxBf7Vgh4Lc?si=LgTiUjNSVSZgH2Bf',
@@ -700,7 +700,7 @@ const ExerciseGroup5 = [
     categories: [bodyCategoriesArms._id, bodyCategoriesBack._id, bodyCategoriesChest._id]
   },  
   {
-    image: './GravityGains/backEnd/seed/Images/exerciseImages/KippingMuscleUp.png',
+    image: '/Images/exerciseImages/KippingMuscleUp.png',
     name: 'Kipping Muscle Up',
     lvl: 'Advanced',
     video: 'https://youtu.be/PMEhv0-WC34?si=6fC4_nb8dDKLefl7',
@@ -731,7 +731,7 @@ const ExerciseGroup5 = [
     categories: [bodyCategoriesArms._id, bodyCategoriesBack._id, bodyCategoriesChest._id]
   },
   {
-    image: './GravityGains/backEnd/seed/Images/exerciseImages/PullUp.png',
+    image: '/Images/exerciseImages/PullUp.png',
     name: 'Pull-Up',
     lvl: 'Beginner',
     video: 'https://www.youtube.com/watch?v=GBqAZP6jquc',
@@ -757,7 +757,7 @@ const ExerciseGroup5 = [
     categories: [bodyCategoriesArms._id, bodyCategoriesBack._id]
   },
   {
-    image: './GravityGains/backEnd/seed/Images/exerciseImages/StraightBarDip.png',
+    image: '/Images/exerciseImages/StraightBarDip.png',
     name: 'Straight Bar Dip',
     lvl: 'Beginner',
     video: 'https://youtu.be/70y7r0vBddM?si=25ThDoaerUJ7jhwr',
@@ -791,7 +791,7 @@ const MuscleUp = await Workout.create({
   // userId: Admin._id,
   exerciseID: G5exerciseIds,
   name: 'Muscle Up',
-  image: './GravityGains/backEnd/seed/Images/workoutImages/MuscleUp.png',
+  image: '/Images/workoutImages/MuscleUp.png',
   lvl: 'Advanced'
 });
 
@@ -806,7 +806,7 @@ const MuscleUpSkill = await Skill.create({
   userId: Admin._id, // Associate it with Admin
   workoutID: MuscleUpWorkoutIds,
   name: 'Muscle Up',
-  image: './GravityGains/backEnd/seed/Images/skillImages/MuscleUp.png',
+  image: '/Images/skillImages/MuscleUp.png',
 });
 console.log(`Skill "${MuscleUpSkill.name}" created with workouts:`, MuscleUpWorkoutIds);
 
@@ -815,7 +815,7 @@ const PlancheSkill = await Skill.create({
   userId: Admin._id,
   workoutID: PlancheWorkoutIds,
   name: 'Planche',
-  image: './GravityGains/backEnd/seed/Images/skillImages/Planche.png',
+  image: '/Images/skillImages/Planche.png',
 });
 console.log(`Skill "${PlancheSkill.name}" created with workouts:`, PlancheWorkoutIds);
 
@@ -824,7 +824,7 @@ const FrontLeverSkill = await Skill.create({
   userId: Admin._id,
   workoutID: FrontLeverWorkoutIds,
   name: 'Front Lever',
-  image: './GravityGains/backEnd/seed/Images/skillImages/FrontLever.png',
+  image: '/Images/skillImages/FrontLever.png',
 });
 console.log(`Skill "${FrontLeverSkill.name}" created with workouts:`, FrontLeverWorkoutIds);
 
@@ -833,7 +833,7 @@ const BackLeverSkill = await Skill.create({
   userId: Admin._id,
   workoutID: BackLeverWorkoutIds,
   name: 'Back Lever',
-  image: './GravityGains/backEnd/seed/Images/skillImages/BackLever.png',
+  image: '/Images/skillImages/BackLever.png',
 });
 console.log(`Skill "${BackLeverSkill.name}" created with workouts:`, BackLeverWorkoutIds);
 
@@ -842,7 +842,7 @@ const PistolSquatSkill = await Skill.create({
   userId: Admin._id,
   workoutID: PistolSquatWorkoutIds,
   name: 'Pistol Squat',
-  image: './GravityGains/backEnd/seed/Images/skillImages/PistolSquat.png',
+  image: '/Images/skillImages/PistolSquat.png',
 });
 console.log(`Skill "${PistolSquatSkill.name}" created with workouts:`, PistolSquatWorkoutIds);
 
@@ -851,7 +851,7 @@ const HandstandPushUpSkill = await Skill.create({
   userId: Admin._id,
   workoutID: HandstandPushUpWorkoutIds,
   name: 'Handstand Push Up',
-  image: './GravityGains/backEnd/seed/Images/skillImages/HandstandPushUp.png',
+  image: '/Images/skillImages/HandstandPushUp.png',
 });
 console.log(`Skill "${HandstandPushUpSkill.name}" created with workouts:`, HandstandPushUpWorkoutIds);
 
@@ -860,7 +860,7 @@ const VSitSkill = await Skill.create({
   userId: Admin._id,
   workoutID: VSitWorkoutIds,
   name: 'V-Sit',
-  image: './GravityGains/backEnd/seed/Images/skillImages/VSit.png',
+  image: '/Images/skillImages/VSit.png',
 });
 console.log(`Skill "${VSitSkill.name}" created with workouts:`, VSitWorkoutIds);
 
@@ -869,7 +869,7 @@ const OneArmPullUpSkill = await Skill.create({
   userId: Admin._id,
   workoutID: OneArmPullUpWorkoutIds,
   name: 'One Arm Pull Up',
-  image: './GravityGains/backEnd/seed/Images/skillImages/OneArmPullUp.png',
+  image: '/Images/skillImages/OneArmPullUp.png',
 });
 console.log(`Skill "${OneArmPullUpSkill.name}" created with workouts:`, OneArmPullUpWorkoutIds);
 
@@ -878,7 +878,7 @@ const HumanFlagSkill = await Skill.create({
   userId: Admin._id,
   workoutID: HumanFlagWorkoutIds,
   name: 'Human Flag',
-  image: './GravityGains/backEnd/seed/Images/skillImages/HumanFlag.png',
+  image: '/Images/skillImages/HumanFlag.png',
 });
 console.log(`Skill "${HumanFlagSkill.name}" created with workouts:`, HumanFlagWorkoutIds);
 
@@ -887,7 +887,7 @@ const OneArmPushUpSkill = await Skill.create({
   userId: Admin._id,
   workoutID: OneArmPushUpWorkoutIds,
   name: 'One Arm Push Up',
-  image: './GravityGains/backEnd/seed/Images/skillImages/OneArmPushUp.png',
+  image: '/Images/skillImages/OneArmPushUp.png',
 });
 console.log(`Skill "${OneArmPushUpSkill.name}" created with workouts:`, HumanFlagWorkoutIds);
 
@@ -896,7 +896,7 @@ const OneArmHandstandSkill = await Skill.create({
   userId: Admin._id,
   workoutID: OneArmHandstandWorkoutIds,
   name: 'One Arm Handstand',
-  image: './GravityGains/backEnd/seed/Images/skillImages/OneArmHandstand.png',
+  image: '/Images/skillImages/OneArmHandstand.png',
 });
 console.log(`Skill "${OneArmHandstandSkill.name}" created with workouts:`, OneArmHandstandWorkoutIds);
 
@@ -906,7 +906,7 @@ const ShrimpSquatSkill = await Skill.create({
   userId: Admin._id,
   workoutID: ShrimpSquatWorkoutIds,
   name: 'Shrimp Squat',
-  image: './GravityGains/backEnd/seed/Images/skillImages/ShrimpSquat.png',
+  image: '/Images/skillImages/ShrimpSquat.png',
 });
 console.log(`Skill "${ShrimpSquatSkill.name}" created with workouts:`, ShrimpSquatWorkoutIds);
 
@@ -916,7 +916,7 @@ const HefestoSkill = await Skill.create({
   userId: Admin._id,
   workoutID: HefestoWorkoutIds,
   name: 'Hefesto',
-  image: './GravityGains/backEnd/seed/Images/skillImages/Hefesto.png',
+  image: '/Images/skillImages/Hefesto.png',
 });
 console.log(`Skill "${HefestoSkill.name}" created with workouts:`, HefestoWorkoutIds);
 
@@ -925,7 +925,7 @@ const DragonFlagSkill = await Skill.create({
   userId: Admin._id,
   workoutID: DragonFlagWorkoutIds,
   name: 'Dragon Flag',
-  image: './GravityGains/backEnd/seed/Images/skillImages/DragonFlag.png',
+  image: '/Images/skillImages/DragonFlag.png',
 });
 console.log(`Skill "${DragonFlagSkill.name}" created with workouts:`, DragonFlagWorkoutIds);
 

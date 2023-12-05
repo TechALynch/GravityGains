@@ -31,6 +31,18 @@ Complement your workouts with nutritional guidance tailored to your calisthenics
 <!-- Share Workouts/Exercises (Stretch)
 As a memeber of GGs the User may export workouts in Json format and send the file to another user so that they can have access to the same workouts/Exercises -->
 
+To Seach within the API for individual Skills, Workouts and exersises within using nodemon in the broswer on localhost port 3000 use the following:
+
+http://localhost:3001/Skills/search?name={Keyword or letter(s)}
+or 
+http://localhost:3001/Workouts/search?name={Keyword or letter(s)}
+or 
+http://localhost:3001/exercises/search?name={Keyword or letter(s)}
+
+For Example, Try this:
+http://localhost:3001/Workouts/search?name=push
+
+
 Embark on your GravityGains journey today and experience the thrill of unlocking your full calisthenics potential. Elevate your fitness game, defy gravity, and attain gains that go beyond the ordinary. Naviage to GravityGains.com now and let the journey to unparalleled strength and confidence begin.
 
 

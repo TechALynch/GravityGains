@@ -28,7 +28,7 @@ export default function Main (){
                 <Route exact path ="/WorkoutIndexPage" element ={<WorkoutIndexPage/>} />
                 <Route exact path ="/WorkoutPage" element ={<WorkoutPage/>} />
                 <Route exact path ="/ExerciseIndexPage" element ={<ExerciseIndexPage/>} />
-                <Route exact path ="/ExercisePage" element ={<ExercisePage/>} />
+                <Route exact path ="/ExercisePage/:id" element ={<ExercisePage/>} />
                 <Route exact path ="/CreatePage" element ={<CreatePage/>} />
                 <Route exact path ="/CreateWorkout" element ={<CreateWorkout/>} />
                 <Route exact path ="/CreateExercise" element ={<CreateExercise/>} />

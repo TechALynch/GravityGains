@@ -40,3 +40,80 @@
 .read-the-docs {
   color: #888;
 }
+
+/* /////CSS START\\\\\ */
+
+
+
+/* SkillsIndexPageHOME */
+.card-body-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-body-flex .card-img {
+  margin-right: -20px;
+}
+
+#card-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#card-flex .card-header,
+#card-flex .card-body {
+  flex: 1;
+}
+
+.SkillsIndexContainer {
+  margin-top: 100px;
+  max-height: 400px;
+  overflow-y: auto;
+  background-color: #f5fdff9c;
+}
+
+
+/* Navbar */
+.hamburger-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.menu-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.menu-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: #ccc;
+  padding: 20px;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.menu-button + .menu-nav {
+  transform: translateX(0);
+}
+
+#AboutDonate {
+  margin-top: auto;
+}

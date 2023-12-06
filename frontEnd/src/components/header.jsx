@@ -1,9 +1,10 @@
-import Navbar from './navbar';
+import React from 'react';
+import HamburgerMenu from './HamburgerMenu';
 
-export default function Header({ isLoggedIn }) {
+export default function Header() {
   return (
     <div className="header">
-      {isLoggedIn && <Navbar />}
+      <HamburgerMenu />
     </div>
   );
 }

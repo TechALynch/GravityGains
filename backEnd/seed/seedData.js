@@ -160,7 +160,7 @@ const main = async () => {
   ////Add new Exercises\\\\
   const ExerciseGroup1 = [
 {
-  image: '/Images/exerciseImages/Pullup.png',
+  image: '/Images/exerciseImages/PullUp.png',
   name: 'Pull-Up',
   lvl: 'Beginner',
   video: 'https://www.youtube.com/watch?v=GBqAZP6jquc',
@@ -663,7 +663,7 @@ for (const ExerciseGroup4Data of ExerciseGroup4) {
 const KippingMuscleUp = await Workout.create({
   // userId: Admin._id,
   exerciseID: G4exerciseIds,
-  name: 'Muscle Up Start (Jumping)',
+  name: 'Kipping Muscle Up',
   image: '/Images/workoutImages/KippingMuscleUp.png',
   lvl: 'Intermediate'
 });

@@ -52,8 +52,8 @@ export default function SkillPage() {
   return (
     <>
       <HamburgerMenu />
-      <div style={{ overflowY: 'scroll', height: '100vh' }}>
-        <Card border="secondary" style={{ width: '18rem' }}>
+      <div style={{ overflowY: 'scroll', height: '80vh' }}>
+        <Card border="secondary" style={{ width: '20rem' }}>
           <Card.Header>{skill.name}</Card.Header>
           {workouts.map((workout) => (
             <Card.Body key={workout._id}>
@@ -61,7 +61,7 @@ export default function SkillPage() {
               <div style={{ display: 'flex', overflowX: 'scroll' }}>
                 {workout.exercises.map((exercise, index) => (
                   <Link key={index} to={`/ExercisePage/${exercise.data._id}`}>
-                    <img src={exercise.data.image} alt={exercise.data.name} style={{ width: '50px', height: '50px', marginRight: '10px' }} />
+                    <img src={exercise.data.image} alt={exercise.data.name} style={{ width: '75px', height: '100px', marginRight: '10px' }} />
                   </Link>
                 ))}
               </div>

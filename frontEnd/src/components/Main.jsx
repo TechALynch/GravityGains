@@ -7,6 +7,7 @@ import WorkoutIndexPage from './WorkoutIndexPage'
 import WorkoutPage from './WorkoutPage'
 import ExerciseIndexPage from './ExerciseIndexPage'
 import ExercisePage from './ExercisePage'
+import MuscleCategoryPage from './MuscleCategoryPage'
 import CreatePage from './CreatePage'
 import CreateWorkout from './CreateWorkout'
 import CreateExercise from './CreateExercise'
@@ -29,6 +30,7 @@ export default function Main (){
                 <Route exact path ="/WorkoutPage" element ={<WorkoutPage/>} />
                 <Route exact path ="/ExerciseIndexPage" element ={<ExerciseIndexPage/>} />
                 <Route exact path ="/ExercisePage/:id" element ={<ExercisePage/>} />
+                <Route path="/category/:id" element={<MuscleCategoryPage />} />
                 <Route exact path ="/CreatePage" element ={<CreatePage/>} />
                 <Route exact path ="/CreateWorkout" element ={<CreateWorkout/>} />
                 <Route exact path ="/CreateExercise" element ={<CreateExercise/>} />

@@ -34,17 +34,17 @@ export default function ExercisePage() {
         <Modal.Title>{exercise.name}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <img src={exercise.image} alt={exercise.name} style={{ width: '100%' }} />
-        <p>Level: {exercise.lvl}</p>
-        <p>Technique Summary: {exercise.techniqueSummary}</p>
-        <p>Description: {exercise.description}</p>
-        {exercise.categories.map((category, index) => (
+      <img src={exercise.image} alt={exercise.name} style={{ width: '80%' }} />
+      <p>Level: {exercise.lvl}</p>
+      {exercise.categories.map((category, index) => (
           <div key={index}>
             <img src={category.image} alt={category.name} onClick={() => navigate(`/category/${category._id}`)} style={{ cursor: 'pointer', width: '50px', height: '50px' }} />
           </div>
         ))}
-        <p>Video: <a href={exercise.video}>Watch here</a></p>
-        <iframe src={`https://www.youtube.com/embed/${getYouTubeVideoId(exercise.video)}`} title="Video Preview" width="320" height="240" />
+      <iframe src={`https://www.youtube.com/embed/${getYouTubeVideoId(exercise.video)}`} title="Video Preview" width="320" height="240" />
+        <p>Video: <a href={exercise.video}>Video External Link</a></p>
+        <p>Technique Summary: {exercise.techniqueSummary}</p>
+        <p>Description: {exercise.description}</p>
       </Modal.Body>
     </Modal>
   );

@@ -10,6 +10,7 @@ const userController = require('./controllers/userController.js')
 const exerciseController = require('./controllers/exerciseController.js')
 const skillController = require('./controllers/skillController.js')
 const workoutController = require('./controllers/workoutController.js')
+const categoryController = require('./controllers/categoriesController.js')
 
 const app = express()
 
@@ -28,11 +29,13 @@ app.get('/skills', skillController.getAllSkills)
 app.get('/users', userController.getAllUsers)
 app.get('/workouts', workoutController.getAllWorkouts)
 
-// New route to search by name
+// New routes to search by name
 app.get('/exercises/search', exerciseController.searchExercisesByName);
 app.get('/skills/search', skillController.searchSkillsByName);
 app.get('/user/search', userController.searchUsersByName);
 app.get('/workouts/search', workoutController.searchWorkoutsByName);
+
+app.get('/category/:id', categoryController.getOneCategory) // New route for fetching a category by its ID
 
 app.get('/exercise/:id', exerciseController.getOneExercise)
 app.get('/skills/:id', skillController.getOneSkill)

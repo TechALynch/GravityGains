@@ -4,8 +4,16 @@ import { Link } from 'react-router-dom';
 import Axios from 'axios';
 import HamburgerMenu from './HamburgerMenu';
 
+// Array of image URLs
+const images = [
+  'https://i.ytimg.com/vi/WxWvTDQ0Yh4/maxresdefault.jpg',
+  'https://t4.ftcdn.net/jpg/02/81/20/91/360_F_281209183_XhvZ0C2SV1q1itrjf5KvvmXB2fzw0MLO.jpg',
+  'https://i.imgur.com/voRujlo.png'
+];
+
 export default function SkillPage() {
   const [skills, setSkills] = useState([]);
+  const [headerImage, setHeaderImage] = useState('');
 
   useEffect(() => {
     // Fetch skills data from your server using Axios
@@ -16,11 +24,17 @@ export default function SkillPage() {
       .catch((error) => {
         console.error('Error fetching skills:', error);
       });
+
+    // Select a random image from the array
+    const randomImage = images[Math.floor(Math.random() * images.length)];
+    setHeaderImage(randomImage);
   }, []);
 
   return (
     <>
-      <HamburgerMenu />
+    <HamburgerMenu />
+    <div className="skills-index-page">
+      <img className="header-image" src={headerImage} alt="Header" />
       <div className="SkillsIndexContainer d-flex flex-wrap justify-content-center">
         {skills.map((skill) => (
           <Link key={skill._id} to={`/SkillPage/${skill._id}`}>
@@ -63,6 +77,7 @@ export default function SkillPage() {
           </Link>
         ))}
       </div>
+    </div>
     </>
   );
 }

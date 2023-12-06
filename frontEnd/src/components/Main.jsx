@@ -2,7 +2,7 @@ import { Route, Routes } from 'react-router-dom'
 import Login from './Login'
 import SignUp from './SignUp'
 import SkillsIndexPageHOME from './SkillsIndexPageHOME'
-import SkillPage from './SkillPage'
+import SkillPage from './skillPage'
 import WorkoutIndexPage from './WorkoutIndexPage'
 import WorkoutPage from './WorkoutPage'
 import ExerciseIndexPage from './ExerciseIndexPage'
@@ -30,6 +30,7 @@ export default function Main (){
                 <Route exact path ="/WorkoutPage" element ={<WorkoutPage/>} />
                 <Route exact path ="/ExerciseIndexPage" element ={<ExerciseIndexPage/>} />
                 <Route exact path ="/ExercisePage/:id" element ={<ExercisePage/>} />
+                <Route path="/exercise/:id" element={<ExercisePage />} />
                 <Route path="/category/:id" element={<MuscleCategoryPage />} />
                 <Route exact path ="/CreatePage" element ={<CreatePage/>} />
                 <Route exact path ="/CreateWorkout" element ={<CreateWorkout/>} />

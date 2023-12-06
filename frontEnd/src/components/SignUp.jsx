@@ -33,11 +33,13 @@ export default function SignUp() {
       // Check if the user was created successfully
       if (response.status === 201) {
         console.log('User created successfully');
+        alert('User Creation Successful!');
 
         // Navigate back to the login page
         navigate('/');
       } else {
         console.error('Error creating user');
+        alert('User Creation Unsuccessful!');
       }
     } catch (error) {
       console.error('Error creating user:', error);

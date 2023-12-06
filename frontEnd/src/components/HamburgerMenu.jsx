@@ -32,6 +32,8 @@ function HamburgerMenu() {
             </li>
             <li><Link className="text-dark text-decoration-none" to="/EquipmentGuide">Equipment Guide</Link></li>
             <li><Link className="text-dark text-decoration-none" to="/UserSettings">User Settings</Link></li>
+            <li><Link className="text-dark text-decoration-none" to="/">Logout</Link></li>
+            {/* <li><Link className="text-dark text-decoration-none" to="/UserSettings">User Exercises/Workouts</Link></li> */}
           </ul>
           <ul id="AboutDonate" className="menu-list list-unstyled">
           <hr />

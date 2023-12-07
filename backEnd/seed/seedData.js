@@ -38,6 +38,7 @@ const main = async () => {
   
   ////Add new body Categories\\\\
   const bodyCategoriesLegs = await Category.create({
+    category_id: 1,
     image: '/Images/categoryImages/legIcon.png',
     name: 'Legs',
     description: `
@@ -58,6 +59,7 @@ const main = async () => {
   });
   
   const bodyCategoriesCore = await Category.create({
+    category_id: 2,
     image: '/Images/categoryImages/coreIcon.png',
     name: 'Core',
     description: `
@@ -78,6 +80,7 @@ const main = async () => {
   });
   
   const bodyCategoriesShoulders = await Category.create({
+    category_id: 3,
     image: '/Images/categoryImages/shoulderIcon.png',
     name: 'Shoulders',
     description: `
@@ -98,6 +101,7 @@ const main = async () => {
   });  
 
   const bodyCategoriesChest = await Category.create({
+    category_id: 4,
     image: '/Images/categoryImages/chestIcon.png',
     name: 'Chest',
     description: `
@@ -118,6 +122,7 @@ const main = async () => {
   });
   
   const bodyCategoriesBack = await Category.create({
+    category_id: 5,
     image: '/Images/categoryImages/backIcon.png',
     name: 'Back',
     description: `
@@ -138,6 +143,7 @@ const main = async () => {
   });
   
   const bodyCategoriesArms = await Category.create({
+    category_id: 6,
     image: '/Images/categoryImages/armsIcon.png',
     name: 'Arms',
     description: `

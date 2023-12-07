@@ -28,6 +28,8 @@ function HamburgerMenu() {
             </NavDropdown>
             <Nav.Link className="custom-nav-link" href="/EquipmentGuide">Equipment Guide</Nav.Link>
             <Nav.Link className="custom-nav-link" href="/">Logout</Nav.Link>
+            <hr></hr>
+            <Nav.Link id='AboutDonate' className="custom-nav-link" href="/AboutDonate">About/Donate</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

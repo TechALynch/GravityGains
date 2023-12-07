@@ -29,6 +29,8 @@ app.get('/skills', skillController.getAllSkills)
 app.get('/users', userController.getAllUsers)
 app.get('/workouts', workoutController.getAllWorkouts)
 
+app.get('/categories', categoryController.getAllCategories)//New Route for getting Cats
+
 // New routes to search by name
 app.get('/exercises/search', exerciseController.searchExercisesByName);
 app.get('/skills/search', skillController.searchSkillsByName);

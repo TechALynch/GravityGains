@@ -1,21 +1,24 @@
+
 import React, { useState, useEffect } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
-import HamburgerMenu from './HamburgerMenu';
 
-function ExerciseForm() {
+function UpdateExerciseForm(props) {
   // Define the state variables for the form fields
-  const [image, setImage] = useState('');
-  const [name, setName] = useState('');
-  const [lvl, setLvl] = useState('');
-  const [video, setVideo] = useState('');
-  const [techniqueSummary, setTechniqueSummary] = useState('');
-  const [description, setDescription] = useState('');
+  const [image, setImage] = useState(props.image || '');
+  const [name, setName] = useState(props.name || '');
+  const [lvl, setLvl] = useState(props.lvl || '');
+  const [video, setVideo] = useState(props.video || '');
+  const [techniqueSummary, setTechniqueSummary] = useState(
+    props.techniqueSummary || ''
+  );
+  const [description, setDescription] = useState(props.description || '');
   const [categories, setCategories] = useState([]);
-  const [selectedCategories, setSelectedCategories] = useState([]);
+  const [selectedCategories, setSelectedCategories] = useState(
+    props.categories || []
+  );
 
   // Define a function to fetch the categories from the database
   const fetchCategories = async () => {
@@ -49,54 +52,11 @@ function ExerciseForm() {
     }
   };
 
-  // Define a function to handle the form submission
-  const handleSubmit = async (e) => {
-    // Prevent the default browser behavior
-    e.preventDefault();
-
-    // Create an object with the form data
-    const exercise = {
-      image,
-      name,
-      lvl,
-      video,
-      techniqueSummary,
-      description,
-      categories: selectedCategories,
-    };
-
-    console.log('Submitting exercise to the database:', exercise);
-
-    // Post the exercise to the database using axios
-    try {
-      const response = await axios.post(
-        'http://localhost:3001/exercise',
-        exercise
-      );
-      console.log('Exercise posted successfully:', response.data);
-      alert('Exercise created successfully!');
-    } catch (error) {
-      console.error('Error posting exercise:', error.message);
-      alert('Something went wrong!');
-    }
-
-    // Reset the form fields
-    setImage('');
-    setName('');
-    setLvl('');
-    setVideo('');
-    setTechniqueSummary('');
-    setDescription('');
-    setSelectedCategories([]);
-  };
-
   // Return the JSX code for the form
   return (
-    <>
-    <HamburgerMenu />
-    <div className='ExerciseForm'>
-      <h1>Create a new exercise</h1>
-      <Form onSubmit={handleSubmit}>
+    <div className='UpdateExerciseForm'>
+      <h1>{props.title}</h1>
+      <Form onSubmit={props.handleOnSubmit}>
         <Form.Group controlId='image'>
           <Form.Label>Image URL</Form.Label>
           <Form.Control
@@ -166,25 +126,17 @@ function ExerciseForm() {
                 label={category.name}
                 value={category._id}
                 onChange={handleCategoryChange}
+                checked={selectedCategories.includes(category._id)}
               />
             ))}
           </div>
-          </Form.Group>
-        <div className='button-ExerciseForm-container' style={{ display: 'flex', justifyContent: 'space-evenly' }}>
-          <Button variant='primary' type='Create' style={{ backgroundColor: '#007bff', borderColor: '#007bff', width: '100px', height: '50px' }}>
-            Submit
-          </Button>
-          <Button style={{ backgroundColor: '#007bff', borderColor: '#007bff', width: '100px', height: '50px' }}>
-            <Link to='/SkillsIndexPageHOME' className='button' style={{ color: 'white', textDecoration: 'none' }}>Back</Link>
-          </Button>
-          <Button style={{ backgroundColor: '#007bff', borderColor: '#007bff', width: '100px', height: '50px' }}>
-            <Link to='/userExercises' className='button' style={{ color: 'white', textDecoration: 'none' }}>My Exercises</Link>
-          </Button>
-        </div>
+        </Form.Group>
+        <Button variant='primary' type='submit'>
+          Submit
+        </Button>
       </Form>
     </div>
-    </>
   );
 }
 
-export default ExerciseForm;
+export default UpdateExerciseForm;

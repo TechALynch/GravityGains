@@ -9,9 +9,10 @@ import ExerciseIndexPage from './ExerciseIndexPage'
 import ExercisePage from './ExercisePage'
 import MuscleCategoryPage from './MuscleCategoryPage'
 import CreateWorkout from './CreateWorkout'
-import CreateExercise from './CreateExercise'
+import CreateExercise from './createExercise'
 import EquipmentGuide from './EquipmentGuide'
 import UserSettings from './UserSettings'
+import UserExercises from './userExercises'
 import AboutDonate from './AboutDonate'
 // import Header from './components/Header'
 
@@ -35,6 +36,7 @@ export default function Main (){
                 <Route exact path ="/CreateExercise" element ={<CreateExercise/>} />
                 <Route exact path ="/EquipmentGuide" element ={<EquipmentGuide/>} />
                 <Route exact path ="/UserSettings" element ={<UserSettings/>} />
+                <Route exact path ="/UserExercises" element ={<UserExercises/>} />
                 <Route exact path ="/AboutDonate" element ={<AboutDonate/>} />
             </Routes>
         </div>

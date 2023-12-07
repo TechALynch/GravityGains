@@ -142,3 +142,14 @@
 #AboutDonate {
   margin-top: auto;
 }
+
+/* /////ExerciseForm\\\\\ */
+.button-ExerciseForm-container button:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.button-ExerciseForm-container button:hover .button {
+  color: #fff;
+}
